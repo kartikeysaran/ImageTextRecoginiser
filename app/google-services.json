@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "165651403168",
+    "firebase_url": "https://image-text-recoginiser.firebaseio.com",
+    "project_id": "image-text-recoginiser",
+    "storage_bucket": "image-text-recoginiser.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165651403168:android:534529cc642de9c465d4c5",
+        "android_client_info": {
+          "package_name": "com.kartikey.imagetextrecoginiser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165651403168-5md419fa4301crq0mh5a3uejnhgbc122.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kartikey.imagetextrecoginiser",
+            "certificate_hash": "3648fda62801a5b4747ff55fc895a73c80ed6f9c"
+          }
+        },
+        {
+          "client_id": "165651403168-gia302115t97jfvt73jla4d1pdn48os7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBChTnS6NbYy6HKCAggJ6pmSZ2gysBWwcw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165651403168-gia302115t97jfvt73jla4d1pdn48os7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
