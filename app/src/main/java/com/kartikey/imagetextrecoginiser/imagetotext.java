@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -35,6 +36,25 @@ public class imagetotext extends AppCompatActivity {
     Dialog mydialog;
     Bitmap imageBitmap;
     static final int REQUEST_IMAGE_CAPTURE = 1;
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        final Dialog dialog;
+        dialog = new Dialog(this);
+        TextView close;
+        dialog.setContentView(R.layout.popup);
+        close = (TextView) dialog.findViewById(R.id.close);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,8 +149,16 @@ public class imagetotext extends AppCompatActivity {
         }
     }
     public void showpopup(View v){
-        TextView close;
-        mydialog.setContentView(R.layout.popup);
+        TextView close,txt_link;
+        mydialog.setContentView(R.layout.popup_about);
+        txt_link = (TextView) mydialog.findViewById(R.id.txt_link);
+        txt_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://firebase.google.com/docs/ml-kit/recognize-text"));
+                startActivity(browserIntent);
+            }
+        });
         close = (TextView) mydialog.findViewById(R.id.close);
         close.setOnClickListener(new View.OnClickListener() {
             @Override

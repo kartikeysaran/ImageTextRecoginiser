@@ -4,124 +4,122 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".imagetotext">
+    tools:context=".imagetotext"
+    android:background="@drawable/background">
 
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        app:srcCompat="@drawable/dsdsdsd" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="236dp"
-        android:layout_height="175dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="92dp"
-        android:layout_marginLeft="92dp"
-        android:layout_marginTop="123dp"
-        android:background="#FFFFFF"
-        android:clickable="true"
-        app:srcCompat="@drawable/addimage" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="125dp"
-        android:layout_height="28dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="147dp"
-        android:layout_marginLeft="147dp"
-        android:layout_marginTop="317dp"
-        android:background="@drawable/custombutton"
-        android:text="Capture Image" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="115dp"
-        android:layout_height="25dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginEnd="121dp"
-        android:layout_marginRight="121dp"
-        android:layout_marginBottom="336dp"
-        android:background="@drawable/custombutton"
-        android:text="Detect Text" />
-
-    <ScrollView
-        android:layout_width="374dp"
-        android:layout_height="159dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginLeft="21dp"
-        android:layout_marginBottom="128dp"
-        android:background="#FFFFFF">
-
+        android:orientation="vertical"
+        android:gravity="center"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="10dp"
+            >
 
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="49dp"
+                android:layout_height="57dp"
+
+
+                android:background="#00FFFFFF"
+                android:onClick="showpopup"
+                app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Image Text Recognizer"
+                android:layout_marginLeft="50dp"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                app:fontFamily="@font/annie_use_your_telescope" />
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="236dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            app:srcCompat="@drawable/addimage" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            app:fontFamily="@font/annie_use_your_telescope"
+            android:textStyle="bold"
+            android:background="@drawable/custombutton"
+            android:text="Capture Image" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/custombutton"
+            app:fontFamily="@font/annie_use_your_telescope"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:text="Detect Text" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            >
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
-                android:layout_height="149dp" />
-        </LinearLayout>
+                android:layout_height="149dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:hint="Detected text will be shown here"
+                android:textColorHint="#a9a9a9"/>
 
-    </ScrollView>
+        </ScrollView>
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="128dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="27dp"
-        android:background="@drawable/custombutton"
-        android:text="Search Online" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custombutton"
+            app:fontFamily="@font/annie_use_your_telescope"
+            android:text="Search Online"
+            android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="106dp"
-        android:layout_marginLeft="106dp"
-        android:layout_marginTop="40dp"
-        android:text="Image Text Recogniser"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        app:fontFamily="@font/annie_use_your_telescope" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="49dp"
-        android:layout_height="57dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="7dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="11dp"
-        android:background="#00FFFFFF"
-        android:onClick="showpopup"
-        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </RelativeLayout>
