@@ -1,4 +1,4 @@
-package com.kartikey.imagetextrecoginiser;
+package com.pam.imagetextrecoginiser;
 
 import androidx.appcompat.app.AppCompatActivity;
 

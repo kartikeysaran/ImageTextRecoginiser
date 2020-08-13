@@ -34,11 +34,5 @@
             android:textAlignment="center"
             android:textColor="#a9a9a9"
              />
-
     </LinearLayout>
-
-
-
-
-
 </RelativeLayout>
